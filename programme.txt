@@ -1,0 +1,5 @@
+begin
+x := 2 + (y - 1);
+read(x, y);
+write(x, 42);
+end
