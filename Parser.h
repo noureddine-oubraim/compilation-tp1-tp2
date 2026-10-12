@@ -9,6 +9,8 @@ typedef enum {
 
 /* Texte du dernier token, partage pour produire des messages d'erreur. */
 extern char token_buffer[256];
+extern unsigned int token_line; /* Ligne ou commence le token courant. */
+extern unsigned int token_column; /* Colonne ou commence le token courant. */
 
 /* Fonctions fournies par le scanner et le parser. */
 token scanner(void);

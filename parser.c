@@ -34,8 +34,8 @@ static token next_token(void)
 static void syntax_error(token unexpected)
 {
 	/* Le scanner conserve le lexeme associe au token inattendu. */
-	fprintf(stderr, "Syntax error: unexpected %s (lexeme '%s')\n",
-		token_name(unexpected), token_buffer);
+	fprintf(stderr, "Syntax error on line %u, column %u: unexpected %s (lexeme '%s')\n",
+		token_line, token_column, token_name(unexpected), token_buffer);
 	exit(EXIT_FAILURE);
 }
 
